@@ -1,0 +1,12 @@
+.login {
+  color: #8239F2;
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 262px;
+  text-align: center;
+
+  &:hover {
+    color: #6A26CC;
+    cursor: pointer;
+  }
+}

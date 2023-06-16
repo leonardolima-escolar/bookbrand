@@ -1,0 +1,20 @@
+.section {
+  width: 1304;
+  background: #FFFFFF;
+  padding: 40px;
+
+  .title {
+    font-size: 48px;
+    color: #8239F2;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 34px;
+  }
+
+  .books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+    grid-gap: 30px;
+    justify-content: space-between;
+  }
+}
