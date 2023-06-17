@@ -1,14 +1,20 @@
 .form {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
-  gap: 5px;
-  padding-left: 27px;
-  padding-right: 27px;
+  gap: 10px;
+  padding: 0px 20px;
 
   input {
     width: 100%;
+    max-width: 944px;
     height: 45px;
     border-radius: 5px;
+    background-color: #F0F0F0;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
 
     &:focus {
       outline: 1px solid #8239F2;

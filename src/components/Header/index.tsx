@@ -6,7 +6,7 @@ import Logo from 'public/assets/logo.png'
 import styles from './style.module.scss'
 
 export default function Header() {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
 
   return (
     <header className={styles.header}>

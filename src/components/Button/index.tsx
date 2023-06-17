@@ -1,9 +1,13 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 import styles from './style.module.scss'
 
-export default function Button({ children }: { children: ReactNode }) {
+interface ButtonProps {
+  children?: ReactNode;
+}
+
+export default function Button({ children }: ButtonProps) {
   return (
-    <button className={styles.button}>
+    <button className={`${styles.button} ${styles.searchButton}`}>
       {children}
     </button>
   )

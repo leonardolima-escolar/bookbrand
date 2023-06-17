@@ -1,8 +1,11 @@
 .button {
-  background: #8239F2;
   border: none;
   border-radius: 5px;
-  width: 45px;
-  height: 45px;
+}
+
+.searchButton {
+  background: #8239F2;
+  min-width: 45px;
+  min-height: 45px;
   cursor: pointer;
 }

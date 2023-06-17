@@ -1,13 +1,13 @@
 import Button from '@/components/Button'
-import { Input, SearchIcon } from "lucide-react"
+import { SearchIcon } from 'lucide-react'
 import styles from './style.module.scss'
 
 export default function SearchBar() {
   return (
     <form action="" className={styles.form}>
-      <input type="text" />
+      <input type="text" placeholder="Pesquisar" />
       <Button>
-        <SearchIcon color="white" />
+        <SearchIcon width={30} height={30} color="white" />
       </Button>
     </form>
   )

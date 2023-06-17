@@ -23,6 +23,10 @@
     .username {
       color: #737380;
       font-size: 16px;
+
+      &:hover {
+        color: #5F6061;
+      }
     }
   }
 }

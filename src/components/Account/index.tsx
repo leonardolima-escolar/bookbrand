@@ -9,7 +9,7 @@ export default function Header() {
         <div className={styles.name}>Leonardo Lima</div>
         <div className={styles.container}>
           <InstagramIcon color="#F58529" />
-          <div className={styles.username}>@leonardolmai</div>
+          <a href="" className={styles.username}>@leonardolmai</a>
         </div>
       </div>
     </div>

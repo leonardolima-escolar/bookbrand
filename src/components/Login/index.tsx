@@ -2,8 +2,8 @@ import styles from './style.module.scss'
 
 export default function Login() {
   return (
-    <span className={styles.login}>
-      Login
-    </span>
+    <div className={styles.login}>
+      <a href="">Login</a>
+    </div>
   )
 }
