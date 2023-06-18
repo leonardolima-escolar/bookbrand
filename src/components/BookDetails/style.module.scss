@@ -4,6 +4,8 @@
   justify-self: center;
   background: #FFFFFF;
   padding: 40px;
+  display: flex;
+  gap: 40px;
 
   .title {
     font-size: 48px;
@@ -11,12 +13,5 @@
     font-weight: bold;
     text-align: left;
     padding-bottom: 34px;
-  }
-
-  .books {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
-    grid-gap: 30px;
-    justify-content: space-between;
   }
 }

@@ -1,0 +1,17 @@
+.container {
+  min-height: calc(100vh - 98px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .linkText {
+    a {
+      color: #8239F2;
+
+      &:hover {
+        color: #6A26CC;
+      }
+    }
+  }
+}

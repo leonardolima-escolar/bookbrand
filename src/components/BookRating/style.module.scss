@@ -1,0 +1,56 @@
+.section {
+  .ratingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 60px;
+
+    .title {
+      font-size: 48px;
+      color: #8239F2;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .rating {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+
+      .score,
+      .total {
+        font-size: 28px;
+      }
+
+      .score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border-radius: 15px;
+        background: #009933;
+        color: white;
+      }
+
+      .total {
+        color: #494D4B;
+      }
+    }
+
+    .ratingInformations {
+      display: flex;
+      font-size: 14px;
+      color: #808080;
+      gap: 58px;
+    }
+  }
+
+  .commentsContainer {
+    .title {
+      font-size: 20px;
+      line-height: 26px;
+      font-weight: 400;
+    }
+  }
+}

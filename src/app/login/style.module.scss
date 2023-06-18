@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  min-height: calc(100vh - 98px);
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ECFAFF;
+    flex-basis: 46.75%;
+    padding: 1.5rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .signIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 27px;
+    flex-basis: 53.25%;
+    padding: 10rem;
+  }
+}
