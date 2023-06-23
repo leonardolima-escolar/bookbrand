@@ -1,15 +1,12 @@
 import Comment from '@/components/Comment'
 import styles from './style.module.scss'
+import { Book } from '@/types/book'
 
-interface BookRatingProps {
-  slug: string
-}
-
-export default function BookDetails({ slug }: BookRatingProps) {
+export default function BookDetails({ book }: { book: Book }) {
   return (
     <section className={styles.section}>
       <section className={styles.ratingContainer}>
-        <h1 className={styles.title}>Título do livro {slug}</h1>
+        <h1 className={styles.title}>{book.title}</h1>
         <div className={styles.rating}>
           <div className={styles.score}>
             4.5
@@ -34,8 +31,11 @@ export default function BookDetails({ slug }: BookRatingProps) {
         <h2 className={styles.title}>Comentários</h2>
 
         <div className={styles.comments}>
-          <Comment />
-          <Comment />
+          {book.comments.length > 0 && (
+            book.comments.map((commentId) => {
+              return <Comment key={commentId} commentId={commentId} />
+            })
+          )}
         </div>
       </section>
     </section>

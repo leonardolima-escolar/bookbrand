@@ -1,19 +1,25 @@
 import BookDetails from "@/components/BookDetails"
 import styles from './style.module.scss'
+import { api } from "@/utils/api"
+import { Book as BookType } from '@/types/book'
 
-export default function Book({ params }: { params: { slug: string } }) {
+export default async function Book({ params }: { params: { slug: string } }) {
+  const response = await api.get(`/books/${params.slug}`)
+
+  const book: BookType = response.data
+
   return (
     <main className={styles.main}>
-      <BookDetails slug={params.slug} />
+      <BookDetails book={book} />
     </main>
   )
 }
 
 export async function getStaticPaths() {
-  const books = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+  const { data } = await api.get('/books')
 
-  const paths = books.map((book) => ({
-    params: { slug: book.toString() },
+  const paths = data.map((book: BookType) => ({
+    params: { slug: book.id.toString() },
   }));
 
   return {

@@ -1,16 +1,20 @@
 import Book from '@/components/Book'
 import styles from './style.module.scss'
 import Link from 'next/link'
+import { api } from '@/utils/api'
+import { Book as BookType } from '@/types/book'
 
-const books = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+export default async function BookList() {
+  const response = await api.get('/books')
 
-export default function BookList() {
+  const books: BookType[] = response.data
+
   return (
     <section className={styles.section}>
       <h1 className={styles.title}>Encontre as melhores indicações de livros</h1>
       <section className={styles.books}>
-        {books.map((item) => {
-          return <Link href={`/books/${item}`} key={item}><Book /></Link>
+        {books.map((book) => {
+          return <Link href={`/books/${book.id}`} key={book.id}><Book book={book} /></Link>
         })}
       </section>
     </section>
